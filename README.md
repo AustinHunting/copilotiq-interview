@@ -1,2 +1,2 @@
 # copilotiq-interview
-Repository to contain interview problems and solutions for CopilotIQ
+Repository containing interview problems and solutions for CopilotIQ
