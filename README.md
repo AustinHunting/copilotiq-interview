@@ -59,7 +59,9 @@ docker run --rm -it -v $(pwd)/hmmmm:/home/ hyperlinks -h
 
 Please note the `-v` flag on on the `run` command. This mirrors the current host directory into the docker container so output can be saved to disk.
 
-This has been tested on Linux and MacOS, when running on Windows you will have to replace `/` with `\` (**untested**)
+This has been tested on Linux and MacOS.
+
+(**untested**) When running on Windows you will have to pass in the current working directory.
 
 ## Running the tests
 
