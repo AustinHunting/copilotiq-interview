@@ -49,7 +49,7 @@ def collect_hyperlinks_from_url(url):
     #   example: Facebook and TikTok
     # the regular expression call is:
     #   links = re.findall(r'[<a href="].*?["]', url)
-    #   the link will be contained in links[1]
+    #   the link will be contained in links[x][9:-1]
 
     # get the source page from url
     link_html = requests.get(url).text
