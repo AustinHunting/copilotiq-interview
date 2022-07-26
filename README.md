@@ -1,7 +1,7 @@
 # CopilotIQ-Interview
 
 Repository containing interview problems and solutions for CopilotIQ.
-We are solving [Links-Exercise-1.rtf](./Links-Exercise-1.rtf). It is a python script for building a linked graph of URLs from a single URL.
+We are solving [Links-Exercise-1.rtf](./Links-Exercise-1.pdf). It is a python script for building a linked graph of URLs from a single URL.
 
 ### Prerequisites
 
