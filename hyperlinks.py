@@ -45,7 +45,7 @@ def clean_link(link, url):
 
 # extract hyperlinks from location provided by a url
 def collect_hyperlinks_from_url(url):
-    # bs4 was selected over re as it seemed to produced more reliable results than re when searching JS heavy sites
+    # bs4 was selected over re as it seemed to produced more reliable results when searching JS heavy sites
     #   example: Facebook and TikTok
     # the regular expression call is:
     #   links = re.findall(r'[<a href="].*?["]', url)
@@ -84,7 +84,7 @@ def scrape_links(startUrl, limit, out=None):
 
     while count < limit:
         link = hyperlinks[0]
-        # prevent cyclical looping when pages link to themselves
+        # prevent cyclical looping when pages link to themselves (Facebook)
         if link not in visited_links:
             visited_links.append(link)
             # print statement is to help a user view that the program is running
