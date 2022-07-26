@@ -9,4 +9,4 @@ ENTRYPOINT [ "/hyperlinks.py" ]
 #   docker build -t hyperlinks .
 
 # run with:
-#   docker run --rm -it -v /tmp/hmmmm:/home/ hyperlinks --url=https://example.com --limit=4 --out=out.json
+#   docker run --rm -it -v $(pwd)/:/home/ hyperlinks --url=https://example.com --limit=4 --out=out.json
