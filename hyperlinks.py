@@ -48,8 +48,8 @@ def collect_hyperlinks_from_url(url):
     # bs4 was selected over re as it seemed to produced more reliable results than re when searching JS heavy sites
     #   example: Facebook and TikTok
     # the regular expression call is:
-    #   single_link = re.findall(r'[<a href="].*?["]', url)
-    #   the link will be contained in single_link[1]
+    #   links = re.findall(r'[<a href="].*?["]', url)
+    #   the link will be contained in links[1]
 
     # get the source page from url
     link_html = requests.get(url).text
@@ -155,7 +155,7 @@ if __name__ == "__main__":
     )
     arguments = argument_parser.parse_args()
 
-    # catch urls without https://
+    # catch urls without http:// or http://
     url = arguments.url
     if not arguments.url.startswith("https://") and not arguments.url.startswith(
         "http://"
