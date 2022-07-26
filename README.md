@@ -42,7 +42,7 @@ The script can be called by running the docker image `hyperlink`
 Example:
 
 ```
-docker run --rm -it -v /tmp/:/home/ hyperlinks --url=https://example.com --limit=4 --out=out.json
+docker run --rm -it -v $(pwd)/:/home/ hyperlinks --url=https://example.com --limit=4 --out=out.json
 ```
 
 `hyperlinks.py` is defined as the entrypoint to the docker container, this means any variables passed into the container will be consumed by `hyperlinks.py`
@@ -51,10 +51,10 @@ Example:
 
 ```
 # will print json to stdout
-docker run --rm -it -v /tmp/:/home/ hyperlinks --url=https://example.com --limit=4
+docker run --rm -it -v $(pwd)/:/home/ hyperlinks --url=https://example.com --limit=4
 
 # will print help text from the hyperlinks script
-docker run --rm -it -v /tmp/hmmmm:/home/ hyperlinks -h
+docker run --rm -it -v $(pwd)/hmmmm:/home/ hyperlinks -h
 ```
 
 Please note the `-v` flag on on the `run` command. This mirrors the current host directory into the docker container so output can be saved to disk.
