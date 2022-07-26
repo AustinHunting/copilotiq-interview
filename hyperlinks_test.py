@@ -6,8 +6,6 @@ from unittest.mock import MagicMock
 from testdata import *
 from hyperlinks import *
 
-# TODO: need to define how tests are going to be run
-
 # mocking a requests.get() call with a 'text' attribute
 class dummy_response:
     def __init__(self, text):

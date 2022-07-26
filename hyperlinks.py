@@ -7,17 +7,6 @@ import json
 import requests
 import sys
 
-# TODO:
-#   ensure everything is formatted with "black"
-#   remove to-to comments
-
-# TODO: plan
-#   document how to use the tests and why they should go in ci (merge to master and branch commit)
-#   Next:
-#       clean everything up
-#       ensure everything is commented
-#       shoot for bonus points
-
 # function to save the computed json to a file or stdout
 def output_json(results, output=None):
     if output is not None:
