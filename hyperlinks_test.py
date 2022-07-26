@@ -13,6 +13,7 @@ class dummy_response:
     def __init__(self, text):
         self.text = text
 
+
 # test cases for parsing pulled web pages, we're mocking the networks call even though example.com is stable
 class test_collect_hyperlinks_from_url(unittest.TestCase):
     @unittest.mock.patch("hyperlinks.requests.get")
@@ -32,6 +33,7 @@ class test_collect_hyperlinks_from_url(unittest.TestCase):
 
         answer = collect_hyperlinks_from_url("https://www.iana.org/domains/reserved/")
         self.assertEqual(answer, iana_link_list)
+
 
 # checking that cleanLinks can handle fragments and attributes
 class test_clean_link(unittest.TestCase):
@@ -55,6 +57,7 @@ class test_clean_link(unittest.TestCase):
         url = "http://www.wikipedia.com/"
         answer = clean_link(link, url)
         self.assertEqual(answer, "http://www.wikipedia.com/super-cool-page/")
+
 
 # kick off the unit tests
 if __name__ == "__main__":

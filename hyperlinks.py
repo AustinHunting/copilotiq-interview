@@ -82,6 +82,7 @@ def collect_hyperlinks_from_url(url):
 
     return hyperlink_list
 
+
 # logic for the main page scraping function
 def scrape_links(startUrl, limit, out=None):
     count = 0
@@ -146,7 +147,7 @@ if __name__ == "__main__":
         "finding all outgoing links (<a> tag): it will store each outgoing link "
         "for the URL, and then repeat the process for each of them, until "
         "--limit URLs will have been traversed.",
-        epilog="Example: hyperlinks.py --url https://docs.python.org/ --limit 10 --out links.json"
+        epilog="Example: hyperlinks.py --url https://docs.python.org/ --limit 10 --out links.json",
     )
     argument_parser.add_argument("--url", help="Starting URL", required=True)
     argument_parser.add_argument(
@@ -158,7 +159,10 @@ if __name__ == "__main__":
         required=True,
     )
     argument_parser.add_argument(
-        "--out", help="File to store computed json data in, defaults to stdout", type=str, action="store"
+        "--out",
+        help="File to store computed json data in, defaults to stdout",
+        type=str,
+        action="store",
     )
     arguments = argument_parser.parse_args()
 
